@@ -1,0 +1,25 @@
+# Node / Frontend
+node_modules/
+dist/
+*.local
+
+# Java / Backend
+backend/target/
+backend/data/
+backend/uploads/
+*.log
+
+# Local scratch / tooling output (not part of the project)
+.staging/
+.npm-cache/
+.npx/
+.trae/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

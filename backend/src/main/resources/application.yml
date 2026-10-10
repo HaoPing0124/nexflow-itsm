@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: nexflow-backend
+  profiles:
+    active: local
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 60MB
+  jackson:
+    time-zone: Asia/Shanghai
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: Asia/Shanghai
+
+server:
+  port: 8080
+  error:
+    include-message: always
+
+app:
+  jwt:
+    # Override via env NEXFLOW_JWT_SECRET in production. Dev value only.
+    secret: ${NEXFLOW_JWT_SECRET:nexflow-dev-secret-change-me-in-production-0123456789abcdef}
+    expiration-ms: 86400000           # 24h
+  upload-dir: ./uploads
+  ai:
+    enabled: false                    # AI facade switch; core works without AI
+  cors:
+    allowed-origins: http://localhost:5173,http://127.0.0.1:5173
+
+logging:
+  level:
+    com.nexflow: INFO
