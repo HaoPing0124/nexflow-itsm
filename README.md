@@ -240,7 +240,7 @@ frontend/                      backend/
 
 ### 后端（端口 8080）
 
-**在 IntelliJ IDEA 中运行（推荐）**
+**在 IntelliJ IDEA 中运行**
 
 1. `File → Open`，选择 `backend` 目录（即含 `pom.xml` 的那一层），以 Maven 项目导入，等待依赖下载完成。
 2. 确认 `File → Project Structure → Project SDK` 为 **JDK 25**（本项目 `pom.xml` 的 `java.version` 为 25）。
